@@ -123,23 +123,48 @@
       color:#777;
       font-size:.9rem;
       border-top:1px solid #222;
-    }
+      
+    } 
+    
+    .language-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+    
+
+.language-buttons button {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
   </style>
 </head>
 
 <body>
 
 <section class="hero">
-
+  
+<div class="language-buttons">
+  <button onclick="setLanguage('en')">ENGLISH</button>
+  <button onclick="setLanguage('es')">ESPAÑOL</button>
+</div>
+  
 <img src="LOGO PNG.png" width="220">
-  <h1>SOLO DMV SERVICES</h1>
-
-  <h2>No DMV Lines. We Come To You.</h2>
-
-  <p>
-    Mobile DMV Services in Las Vegas.<br>
-    Titles • Registration • Moving Permits • Bilingual Assistance
-  </p>
+  <h1 id="title">SOLO DMV SERVICES</h1>
+  <h2 id="subtitle">No DMV Lines. We Come To You.</h2>
+  
+ 
+  <p id="description">
+  Mobile DMV Services in Las Vegas.<br>
+  Titles • Registration • Moving Permits • Bilingual Assistance
+</p>
+  
 
   <div class="buttons">
     <a class="btn gold" href="tel:17252331518">CALL NOW</a>
@@ -191,4 +216,40 @@
 </footer>
 
 </body>
-</html>
+ </footer>
+
+<script>
+function setLanguage(lang) {
+
+  if (lang === 'es') {
+
+    document.getElementById('title').innerHTML =
+      'SOLO DMV SERVICES';
+
+    document.getElementById('subtitle').innerHTML =
+      'Sin Filas En El DMV. Nosotros Vamos A Ti.';
+
+    document.getElementById('description').innerHTML =
+      'Servicios móviles de DMV en Las Vegas.<br>Títulos • Registración • Permisos • Servicio Bilingüe';
+
+  }
+
+  if (lang === 'en') {
+
+    document.getElementById('title').innerHTML =
+      'SOLO DMV SERVICES';
+
+    document.getElementById('subtitle').innerHTML =
+      'No DMV Lines. We Come To You.';
+
+    document.getElementById('description').innerHTML =
+      'Mobile DMV Services in Las Vegas.<br>Titles • Registration • Moving Permits • Bilingual Assistance';
+
+  }
+
+}
+</script>
+
+</body>
+</html> 
+
