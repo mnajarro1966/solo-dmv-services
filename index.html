@@ -179,41 +179,51 @@
 
 <section class="services">
 
-  <h3>SERVICES</h3>
+  <h3 id="services-title">SERVICES</h3>
 
   <div class="grid">
 
     <div class="card">
-      <h4>Title Transfers</h4>
-      <p>Fast assistance with vehicle ownership transfers.</p>
+     <h4 id="card1-title">Title Transfers</h4>
+     <p id="card1-text">Fast assistance with vehicle ownership transfers.</p>
     </div>
 
     <div class="card">
-      <h4>Vehicle Registration</h4>
-      <p>Skip the DMV wait and get help fast.</p>
+      <h4 id="card2-title">Vehicle Registration</h4>
+
+<p id="card2-text">
+Skip the DMV wait and get help fast.
+</p>
     </div>
 
     <div class="card">
-      <h4>Moving Permits</h4>
-      <p>Quick temporary permits and DMV paperwork assistance.</p>
+      <h4 id="card3-title">Moving Permits</h4>
+
+
+
+<p id="card3-text">
+Quick temporary permits and DMV paperwork assistance.
+</p>
     </div>
 
     <div class="card">
-      <h4>Bilingual Service</h4>
-      <p>English & Spanish assistance available.</p>
-    </div>
+     <h4 id="card4-title">Bilingual Service</h4>
 
+<p id="card4-text">
+English & Spanish assistance available.
+</p>
   </div>
 
 </section>
 
-<footer>
- <footer>
+<footer id="footer-text">
+
   Solo DMV Services is an independent service provider and is not affiliated with the Nevada DMV or any government agency.
   <br><br>
   We are not attorneys and cannot provide legal advice.
 </footer> 
-</footer>
+
+
 
 </body>
  </footer>
@@ -231,23 +241,70 @@ function setLanguage(lang) {
 
     document.getElementById('description').innerHTML =
       'Servicios móviles de DMV en Las Vegas.<br>Títulos • Registración • Permisos • Servicio Bilingüe';
+document.getElementById('services-title').innerHTML =
+  'SERVICIOS';
 
+document.getElementById('card1-title').innerHTML =
+  'Transferencia De Título';
+
+document.getElementById('card1-text').innerHTML =
+  'Ayuda rápida con cambios de propietario.';
+
+document.getElementById('card2-title').innerHTML =
+  'Registración Vehicular';
+
+document.getElementById('card2-text').innerHTML =
+  'Evita las filas del DMV y recibe ayuda rápida.';
+
+document.getElementById('card3-title').innerHTML =
+  'Permisos Temporales';
+
+document.getElementById('card3-text').innerHTML =
+  'Permisos rápidos y ayuda con documentos del DMV.';
+
+document.getElementById('card4-title').innerHTML =
+  'Servicio Bilingüe';
+
+document.getElementById('card4-text').innerHTML =
+  'Atención disponible en inglés y español.';
+
+document.getElementById('footer-text').innerHTML =
+  'Solo DMV Services es un proveedor independiente y no está afiliado con el DMV de Nevada ni con ninguna agencia gubernamental.<br><br>No somos abogados y no podemos dar asesoría legal.';
   }
-
   if (lang === 'en') {
+document.getElementById('services-title').innerHTML =
+  'SERVICES';
 
-    document.getElementById('title').innerHTML =
-      'SOLO DMV SERVICES';
+document.getElementById('card1-title').innerHTML =
+  'Title Transfers';
 
-    document.getElementById('subtitle').innerHTML =
-      'No DMV Lines. We Go for You.';
+document.getElementById('card1-text').innerHTML =
+  'Fast assistance with vehicle ownership transfers.';
 
-    document.getElementById('description').innerHTML =
-      'Mobile DMV Services in Las Vegas.<br>Titles • Registration • Moving Permits • Bilingual Assistance';
+document.getElementById('card2-title').innerHTML =
+  'Vehicle Registration';
 
-  }
+document.getElementById('card2-text').innerHTML =
+  'Skip the DMV wait and get help fast.';
 
-}
+document.getElementById('card3-title').innerHTML =
+  'Moving Permits';
+
+document.getElementById('card3-text').innerHTML =
+  'Quick temporary permits and DMV paperwork assistance.';
+
+document.getElementById('card4-title').innerHTML =
+  'Bilingual Service';
+
+document.getElementById('card4-text').innerHTML =
+  'English & Spanish assistance available.';
+
+document.getElementById('footer-text').innerHTML =
+  'Solo DMV Services is an independent service provider and is not affiliated with the Nevada DMV or any government agency.<br><br>We are not attorneys and cannot provide legal advice.';
+   
+  }  
+
+}    
 </script>
 
 </body>
