@@ -167,11 +167,13 @@
   
 
   <div class="buttons">
-    <a class="btn gold" href="tel:17252331518">CALL NOW</a>
-
+  <a id="call-btn" class="btn gold" href="tel:17252331518">CALL NOW</a>
     <a class="btn outline"
     href="https://wa.me/17252331518">
-    WHATSAPP
+   <a id="whatsapp-btn" class="btn outline"
+href="https://wa.me/17252331518">
+WHATSAPP
+</a>
     </a>
   </div>
 
@@ -232,7 +234,11 @@ English & Spanish assistance available.
 function setLanguage(lang) {
 
   if (lang === 'es') {
+document.getElementById('call-btn').innerHTML =
+  'LLÁMANOS';
 
+document.getElementById('whatsapp-btn').innerHTML =
+  'WHATSAPP';
     document.getElementById('title').innerHTML =
       'SOLO DMV SERVICES';
 
@@ -272,6 +278,11 @@ document.getElementById('footer-text').innerHTML =
   'Solo DMV Services es un proveedor independiente y no está afiliado con el DMV de Nevada ni con ninguna agencia gubernamental.<br><br>No somos abogados y no podemos dar asesoría legal.';
   }
   if (lang === 'en') {
+    document.getElementById('call-btn').innerHTML =
+  'CALL NOW';
+
+document.getElementById('whatsapp-btn').innerHTML =
+  'WHATSAPP';
     document.getElementById('title').innerHTML =
   'SOLO DMV SERVICES';
 
