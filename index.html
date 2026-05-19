@@ -1,545 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Solo DMV Services Las Vegas | Title Transfers & DMV Help</title>
-<meta name="description" content="Mobile DMV services in Las Vegas offering title transfers, vehicle registration, moving permits, and bilingual DMV assistance.">
-  <meta name="keywords" content="DMV Las Vegas, title transfer Las Vegas, moving permit Las Vegas, vehicle registration Las Vegas, bilingual DMV service">
-  <style>
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:#000;
-      color:white;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .hero{
-  min-height:100vh;
+    <title>Solo DMV Services</title>
 
-  background:
-    radial-gradient(circle at center,
-    rgba(255,215,0,0.18) 0%,
-    rgba(0,0,0,0) 45%),
-    #000;
+    <style>
 
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  padding:40px 20px;
+        body {
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
 
-  position:relative;
-  overflow:hidden;
-    }
- .licensed-badge {
-  position: absolute;
-  top: 28px;
-  left: 25px;
+        /* TOP BAR */
 
-  display: flex;
-  align-items: center;
-  gap: 10px;
+        .top-bar {
 
-  color: #D4AF37;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+            width: 100%;
 
-  z-index: 1000;
-}
+            padding: 20px;
 
-.badge-icon {
-  width: 32px;
-  height: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  border: 2px solid #D4AF37;
-  border-radius: 50%;
+        .licensed {
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+            color: #ffcc00;
 
-  font-size: 20px;
+            font-weight: bold;
 
-  background: rgba(212,175,55,0.08);
+            font-size: 0.9rem;
+        }
 
-  box-shadow: 0 0 10px rgba(212,175,55,0.5);
-}
+        .language-buttons {
 
-@media (max-width: 768px) {
-  .licensed-badge {
-    font-size: 11px;
-    top: 28px;
-   left: 15px;
-  }
-}
+            display: flex;
+            gap: 10px;
+        }
 
-    
-    .logo{
-      width:220px;
-      margin-bottom:30px;
-      border-radius:50%;
-      box-shadow:0 0 40px rgba(255,215,0,.3);
-    }
+        .language-buttons button {
 
-    h1{
-      font-size:4rem;
-      color:gold;
-      margin:0;
-    }
+            background: transparent;
 
-    h2{
-      font-size:2rem;
-      margin-top:15px;
-      color:white;
-    }
+            border: 2px solid #ffcc00;
 
-    p{
-      max-width:700px;
-      line-height:1.7;
-      color:#ccc;
-      font-size:1.1rem;
-    }
+            color: #ffcc00;
 
-    .buttons{
-      margin-top:35px;
-      display:flex;
-      gap:15px;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
+            padding: 10px 18px;
 
-    .btn{
-      padding:15px 30px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:.3s;
-    }
+            border-radius: 12px;
 
-    .btn.gold{
-  background:transparent;
-  color:gold;
-  border:2px solid gold;
-}
-   
+            font-weight: bold;
 
-    .btn:hover{
-  transform: scale(1.05);
-  box-shadow: 0 0 15px gold;
-    }
-  .btn.outline:hover{
-  background: transparent;
-  color: gold;
-}    
+            cursor: pointer;
 
-    .outline{
-      border:2px solid gold;
-      color:gold;
-    }
+            transition: 0.3s;
+        }
 
-    .outline:hover{
-      background:gold;
-      color:black;
-    }
+        .language-buttons button:hover {
 
-    .services{
-      padding:80px 20px;
-      text-align:center;
-      background:#0a0a0a;
-    }
+            background: #ffcc00;
+            color: black;
+        }
 
-    .services h3{
-      color:gold;
-      font-size:2.5rem;
-      margin-bottom:40px;
-    }
+        /* HERO */
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-      max-width:1200px;
-      margin:auto;
-    }
+        .hero {
 
-    .card{
-      background:#111;
-      padding:30px;
-      border-radius:20px;
-      border:1px solid rgba(255,215,0,.2);
-    }
+            width: 100%;
 
-    .card h4{
-      color:gold;
-      margin-bottom:15px;
-    }
+            display: flex;
+            flex-direction: column;
 
-    footer{
-      padding:30px;
-      text-align:center;
-      color:#777;
-      font-size:.9rem;
-      border-top:1px solid #222;
-      
-    } 
-   .language-buttons {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  z-index: 1000;
-} 
-  .language-buttons button {
-  background: rgba(0,0,0,0.7);
-  color: gold;
-  border: 2px solid gold;
-  padding: 10px 15px;
-  margin-left: 10px;
-  border-radius: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-    
+            justify-content: center;
+            align-items: center;
 
+            text-align: center;
 
+            padding: 20px;
+        }
 
- .socials{
-  margin-top:30px;
-  display:flex;
-  gap:20px;
-  justify-content:center;
-}
+        /* LOGO */
 
-.socials a{
-  color:gold;
-  text-decoration:none;
-  font-weight:bold;
-}
+        .logo img {
 
-.socials a:hover{
-  color:white;
-} 
- .map-section{
-  margin-top:80px;
-  max-width:1000px;
-  margin-left:auto;
-  margin-right:auto;
-}
+            width: 300px;
+            max-width: 90%;
 
-.map-section h3{
-  color:gold;
-  margin-bottom:25px;
-} 
-   .reviews{
-  margin-top:80px;
-  text-align:center;
-}
+            margin-bottom: 30px;
+        }
 
-.reviews h3{
-  color:gold;
-  margin-bottom:40px;
-}
+        /* TITLE */
 
-.review-card{
-  border:1px solid gold;
-  border-radius:20px;
-  padding:25px;
-  margin:20px auto;
-  max-width:700px;
-  background:#111;
-}
+        .hero h1 {
 
-.review-card p{
-  margin:15px 0;
-}
+            color: #ffcc00;
 
-.review-card span{
-  color:gold;
-  font-weight:bold;
-}
+            font-size: 5rem;
+            font-weight: 900;
 
-.review-btn{
-  display:inline-block;
-  margin-top:30px;
-  background:gold;
-  color:black;
-  padding:15px 30px;
-  border-radius:15px;
-  text-decoration:none;
-  font-weight:bold;
-} 
-   .card,
-.review-card,
-.btn,
-.socials a,
-.language-buttons button{
-  transition: all 0.3s ease;
-}
+            line-height: 0.95;
 
-.card:hover,
-.review-card:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px gold;
-}
+            margin-bottom: 30px;
 
-.btn:hover{
-  transform: scale(1.05);
-}
+            text-shadow:
+                0 0 10px rgba(255, 204, 0, 0.2),
+                0 0 30px rgba(255, 204, 0, 0.15);
+        }
 
-.socials a:hover{
-  transform: scale(1.15);
-} 
- .language-buttons button:hover{
-  transform: scale(1.08);
-  box-shadow: 0 0 15px gold;
-}   
-  </style>
- 
+        /* SUBTITLE */
+
+        .hero h2 {
+
+            font-size: 3rem;
+            font-weight: bold;
+
+            line-height: 1.1;
+
+            margin-bottom: 10px;
+        }
+
+        /* GOLD NEON */
+
+        .gold-neon {
+
+            margin-top: 20px;
+            margin-bottom: 35px;
+
+            color: #ffcc00;
+
+            font-size: 2.2rem;
+            font-weight: 300;
+
+            letter-spacing: 8px;
+
+            text-shadow:
+                0 0 5px #ffcc00,
+                0 0 10px #ffcc00,
+                0 0 20px rgba(255, 204, 0, 0.8),
+                0 0 40px rgba(255, 204, 0, 0.5);
+
+            animation: flicker 4s infinite;
+        }
+
+        /* DESCRIPTION */
+
+        .description {
+
+            max-width: 900px;
+
+            font-size: 1.4rem;
+
+            line-height: 1.8;
+
+            opacity: 0.9;
+
+            margin-bottom: 50px;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+
+            display: flex;
+            gap: 25px;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
+
+        .buttons a {
+
+            border: 3px solid #ffcc00;
+
+            color: #ffcc00;
+
+            text-decoration: none;
+
+            padding: 20px 40px;
+
+            border-radius: 18px;
+
+            font-size: 1.4rem;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .buttons a:hover {
+
+            background: #ffcc00;
+            color: black;
+        }
+
+        /* FLICKER */
+
+        @keyframes flicker {
+
+            0%,
+            18%,
+            22%,
+            25%,
+            53%,
+            57%,
+            100% {
+                opacity: 1;
+            }
+
+            20%,
+            24%,
+            55% {
+                opacity: 0.6;
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .top-bar {
+
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero h1 {
+
+                font-size: 4rem;
+            }
+
+            .hero h2 {
+
+                font-size: 2.5rem;
+            }
+
+            .gold-neon {
+
+                font-size: 1.5rem;
+
+                letter-spacing: 5px;
+
+                margin-top: 15px;
+                margin-bottom: 30px;
+            }
+
+            .description {
+
+                font-size: 1rem;
+
+                line-height: 1.7;
+
+                padding: 0 10px;
+            }
+
+            .buttons {
+
+                width: 100%;
+
+                flex-direction: row;
+            }
+
+            .buttons a {
+
+                flex: 1;
+
+                text-align: center;
+
+                font-size: 1.1rem;
+
+                padding: 18px 20px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-<section class="hero">
-<div class="licensed-badge">
+    <div class="top-bar">
 
-<div class="badge-icon">
-🛡️
-</div>
+        <div class="licensed" id="licensedText">
+            LICENSED & BONDED
+        </div>
 
-<span>Licensed & Bonded</span>
+        <div class="language-buttons">
 
-</div><div class="language-buttons">
-  <button onclick="setLanguage('en')">ENGLISH</button>
-  <button onclick="setLanguage('es')">ESPAÑOL</button>
-</div>
-  
-<img src="LOGO PNG.png" width="220" alt="Solo DMV Services Las Vegas Logo">
-  <h1 id="title">SOLO DMV SERVICES</h1>
-  <h2 id="subtitle">Las Vegas Mobile DMV Services</h2>
-  
- 
-  <p id="description">
-  Mobile DMV services in Las Vegas for title transfers, vehicle registration, moving permits, and bilingual DMV assistance.<br>
-Fast DMV help without long DMV lines.
-</p>
-  
+            <button onclick="setEnglish()">
+                ENGLISH
+            </button>
 
-  <div class="buttons">
-  <a id="call-btn" class="btn gold" href="tel:17252331518">CALL NOW</a>
-    
-   
-   <a id="whatsapp-btn" class="btn outline"
-href="https://wa.me/17252331518">
-WHATSAPP
-</a>
-   
-  </div>
-<div class="socials">
+            <button onclick="setSpanish()">
+                ESPAÑOL
+            </button>
 
-  <a href="https://facebook.com" target="_blank">
-    FACEBOOK
-  </a>
+        </div>
 
- <a href="https://instagram.com/solo_dmv_services_" target="_blank">
-  INSTAGRAM
-</a>
-  
-
-  <a href="https://tiktok.com" target="_blank">
-    TIKTOK
-  </a>
-
-</div>
-</section>
-
-<section class="services">
-
-  <h3 id="services-title">Las Vegas DMV SERVICES</h3>
-
-  <div class="grid">
-
-    <div class="card">
-     <h4 id="card1-title">Title Transfers</h4>
-     <p id="card1-text">Fast assistance with vehicle ownership transfers.</p>
     </div>
 
-    <div class="card">
-      <h4 id="card2-title">Vehicle Registration</h4>
+    <section class="hero">
 
-<p id="card2-text">
-Skip the DMV wait and get help fast.
-</p>
-    </div>
+        <div class="logo">
 
-    <div class="card">
-      <h4 id="card3-title">Moving Permits</h4>
+            <img src="logo.png" alt="Solo DMV">
 
+        </div>
 
+        <h1 id="mainTitle">
+            SOLO DMV<br>
+            SERVICES
+        </h1>
 
-<p id="card3-text">
-Quick temporary permits and DMV paperwork assistance.
-</p>
-    </div>
+        <h2 id="subtitle">
+            Las Vegas Mobile DMV<br>
+            Services
+        </h2>
 
-    <div class="card">
-     <h4 id="card4-title">Bilingual Service</h4>
+        <div class="gold-neon" id="neonText">
+            WE COME TO YOU
+        </div>
 
-<p id="card4-text">
-English & Spanish assistance available.
-</p>
-  </div>
+        <div class="description" id="descriptionText">
 
-</section>
-<div class="map-section">
+            Mobile DMV services in Las Vegas for title transfers,
+            vehicle registration, moving permits, and bilingual DMV assistance.
 
-<h3>LAS VEGAS SERVICE AREA</h3>
+            <br><br>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206253.53243326806!2d-115.33980653297783!3d36.12488712857212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1778744644324!5m2!1sen!2sus"
-width="100%"
-height="450"
-style="border:0; border-radius:20px;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
+            Fast DMV help without long DMV lines.
 
-</div>
-  <section class="reviews">
+        </div>
 
-<h3>CUSTOMER REVIEWS</h3>
+        <div class="buttons">
 
-<div class="review-card">
-⭐️⭐️⭐️⭐️⭐️
-<p>"Fast DMV help without waiting in long lines."</p>
-<span>- Carlos R.</span>
-</div>
+            <a href="tel:+17252331518" id="callButton">
+                CALL NOW
+            </a>
 
-<div class="review-card">
-⭐️⭐️⭐️⭐️⭐️
-<p>"Very professional and bilingual service."</p>
-<span>- Maria G.</span>
-</div>
+            <a href="https://wa.me/17252331518" id="whatsappButton">
+                WHATSAPP
+            </a>
 
-<a class="review-btn"
-href="https://g.page/r/YOUR-GOOGLE-REVIEW-LINK"
-target="_blank">
-LEAVE A REVIEW
-</a>
+        </div>
 
-</section>
-<footer id="footer-text">
+    </section>
 
-  Solo DMV Services is an independent service provider and is not affiliated with the Nevada DMV or any government agency.
-  <br><br>
-  We are not attorneys and cannot provide legal advice.
-</footer> 
+    <script>
 
+        function setSpanish() {
 
+            document.getElementById("licensedText").innerHTML =
+                "LICENCIADO Y ASEGURADO";
+
+            document.getElementById("subtitle").innerHTML =
+                "Servicios Móviles DMV<br>Las Vegas";
+
+            document.getElementById("neonText").innerHTML =
+                "VAMOS HASTA USTED";
+
+            document.getElementById("descriptionText").innerHTML =
+                "Servicios móviles de DMV en Las Vegas para traspasos de títulos, registros de vehículos, permisos de movimiento y asistencia bilingüe DMV.<br><br>Ayuda rápida sin largas filas del DMV.";
+
+            document.getElementById("callButton").innerHTML =
+                "LLÁMANOS";
+
+            document.getElementById("whatsappButton").innerHTML =
+                "WHATSAPP";
+        }
+
+        function setEnglish() {
+
+            document.getElementById("licensedText").innerHTML =
+                "LICENSED & BONDED";
+
+            document.getElementById("subtitle").innerHTML =
+                "Las Vegas Mobile DMV<br>Services";
+
+            document.getElementById("neonText").innerHTML =
+                "WE COME TO YOU";
+
+            document.getElementById("descriptionText").innerHTML =
+                "Mobile DMV services in Las Vegas for title transfers, vehicle registration, moving permits, and bilingual DMV assistance.<br><br>Fast DMV help without long DMV lines.";
+
+            document.getElementById("callButton").innerHTML =
+                "CALL NOW";
+
+            document.getElementById("whatsappButton").innerHTML =
+                "WHATSAPP";
+        }
+
+    </script>
 
 </body>
- </footer>
 
-<script>
-function setLanguage(lang) {
-
-  if (lang === 'es') {
-document.getElementById('call-btn').innerHTML =
-  'LLÁMANOS';
-
-document.getElementById('whatsapp-btn').innerHTML =
-  'WHATSAPP';
-    document.getElementById('title').innerHTML =
-      'SOLO DMV SERVICES';
-
-    document.getElementById('subtitle').innerHTML =
-      'Sin Filas En El DMV. Nosotros Vamos Por Ti.';
-
-    document.getElementById('description').innerHTML =
-      'Servicios móviles de DMV en Las Vegas.<br>Títulos • Registración • Permisos • Servicio Bilingüe';
-document.getElementById('services-title').innerHTML =
-  'SERVICIOS';
-
-document.getElementById('card1-title').innerHTML =
-  'Transferencia De Título';
-
-document.getElementById('card1-text').innerHTML =
-  'Ayuda rápida con cambios de propietario.';
-
-document.getElementById('card2-title').innerHTML =
-  'Registración Vehicular';
-
-document.getElementById('card2-text').innerHTML =
-  'Evita las filas del DMV y recibe ayuda rápida.';
-
-document.getElementById('card3-title').innerHTML =
-  'Permisos Temporales';
-
-document.getElementById('card3-text').innerHTML =
-  'Permisos rápidos y ayuda con documentos del DMV.';
-
-document.getElementById('card4-title').innerHTML =
-  'Servicio Bilingüe';
-
-document.getElementById('card4-text').innerHTML =
-  'Atención disponible en inglés y español.';
-
-document.getElementById('footer-text').innerHTML =
-  'Solo DMV Services es un proveedor independiente y no está afiliado con el DMV de Nevada ni con ninguna agencia gubernamental.<br><br>No somos abogados y no podemos dar asesoría legal.';
-  }
-  if (lang === 'en') {
-    document.getElementById('call-btn').innerHTML =
-  'CALL NOW';
-
-document.getElementById('whatsapp-btn').innerHTML =
-  'WHATSAPP';
-    document.getElementById('title').innerHTML =
-  'SOLO DMV SERVICES';
-
-document.getElementById('subtitle').innerHTML =
-  'No DMV Lines. We Go For You.';
-
-document.getElementById('description').innerHTML =
-  'Mobile DMV Services in Las Vegas.<br>Titles • Registration • Moving Permits • Bilingual Assistance';
-document.getElementById('services-title').innerHTML =
-  'SERVICES';
-
-document.getElementById('card1-title').innerHTML =
-  'Title Transfers';
-
-document.getElementById('card1-text').innerHTML =
-  'Fast assistance with vehicle ownership transfers.';
-
-document.getElementById('card2-title').innerHTML =
-  'Vehicle Registration';
-
-document.getElementById('card2-text').innerHTML =
-  'Skip the DMV wait and get help fast.';
-
-document.getElementById('card3-title').innerHTML =
-  'Moving Permits';
-
-document.getElementById('card3-text').innerHTML =
-  'Quick temporary permits and DMV paperwork assistance.';
-
-document.getElementById('card4-title').innerHTML =
-  'Bilingual Service';
-
-document.getElementById('card4-text').innerHTML =
-  'English & Spanish assistance available.';
-
-document.getElementById('footer-text').innerHTML =
-  'Solo DMV Services is an independent service provider and is not affiliated with the Nevada DMV or any government agency.<br><br>We are not attorneys and cannot provide legal advice.';
-   
-  }  
-
-}    
-</script>
-
-</body>
-</html> 
-
+</html>
