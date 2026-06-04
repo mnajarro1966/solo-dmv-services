@@ -558,7 +558,7 @@ WHATSAPP
     <p id="card4-text">Tap for details</p>
 </div>
 
-<div class="card">
+<div class="card" onclick="openPopup('businessPopup')">
     <h4 id="card5-title">Start Your Business</h4>
     <p id="card5-text">Tap for details</p>
 </div>
@@ -606,6 +606,19 @@ WHATSAPP
     ✓ Document Guidance<br><br>
     <button onclick="closePopup('bilingualPopup')">Close</button>
   </div>
+</div>
+  <div id="businessPopup" class="popup">
+    <div class="popup-content">
+        <h3>Start Your Business</h3>
+
+        ✔ LLC Formation<br>
+        ✔ EIN Registration<br>
+        ✔ DBA Registration<br>
+        ✔ Business License<br>
+        ✔ Annual Renewals<br><br>
+
+        <button onclick="closePopup('businessPopup')">Close</button>
+    </div>
 </div>
 <div class="map-section">
 
