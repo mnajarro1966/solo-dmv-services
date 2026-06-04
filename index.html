@@ -406,7 +406,44 @@ padding:0 15px;
  .language-buttons button:hover{
   transform: scale(1.08);
   box-shadow: 0 0 15px gold;
-}   
+} 
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.85);
+z-index:9999;
+}
+
+.popup-content{
+background:#111;
+border:2px solid gold;
+border-radius:20px;
+padding:30px;
+max-width:500px;
+margin:120px auto;
+text-align:center;
+color:white;
+box-shadow:0 0 30px gold;
+}
+
+.popup-content h3{
+color:gold;
+}
+
+.popup-content button{
+background:gold;
+color:black;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+}    
   </style>
  
 
@@ -500,58 +537,68 @@ WHATSAPP
   <h3 id="services-title">Las Vegas DMV SERVICES</h3>
 
   <div class="grid">
-<div class="card">
+<div class="card" onclick="openPopup('titlePopup')">
   <h4 id="card1-title">Title Transfers</h4>
-
-  <p id="card1-text">
-  ✓ Signed Title<br>
-  ✓ Valid ID<br>
-  ✓ Nevada Insurance<br>
-  ✓ Smog Check (if required)<br><br>
-
-  Fast assistance with vehicle ownership transfers.
-  </p>
+  <p id="card1-text">Tap for requirements</p>
 </div>
-    <div class="card">
+
+<div class="card" onclick="openPopup('registrationPopup')">
   <h4 id="card2-title">Vehicle Registration</h4>
-
-  <p id="card2-text">
-  ✓ Proof of Ownership<br>
-  ✓ Nevada Insurance<br>
-  ✓ Smog Check (if required)<br>
-  ✓ VIN Inspection (out-of-state vehicles)<br><br>
-
-  Skip the DMV wait and get help fast.
-  </p>
+  <p id="card2-text">Tap for requirements</p>
 </div>
-   
 
-
-
-<div class="card">
+<div class="card" onclick="openPopup('permitPopup')">
   <h4 id="card3-title">Moving Permits</h4>
+  <p id="card3-text">Tap for requirements</p>
+</div>
 
-  <p id="card3-text">
-  ✓ VIN Number<br>
-  ✓ Vehicle Information<br>
-  ✓ Insurance Information<br><br>
-
-  Temporary permits for vehicles without plates or pending registration.
-  </p>
-  
-<div class="card">
+<div class="card" onclick="openPopup('bilingualPopup')">
   <h4 id="card4-title">Bilingual Service</h4>
-
-  <p id="card4-text">
-  ✓ English Assistance<br>
-  ✓ Spanish Assistance<br>
-  ✓ DMV Forms Help<br>
-  ✓ Document Guidance<br><br>
-
-  We help you understand the process.
-  </p>
+  <p id="card4-text">Tap for details</p>
 </div>
 </section>
+  <div id="titlePopup" class="popup">
+  <div class="popup-content">
+    <h3>Title Transfers</h3>
+    ✓ Signed Title<br>
+    ✓ Valid ID<br>
+    ✓ Nevada Insurance<br>
+    ✓ Smog Check (if required)<br><br>
+    <button onclick="closePopup('titlePopup')">Close</button>
+  </div>
+</div>
+
+<div id="registrationPopup" class="popup">
+  <div class="popup-content">
+    <h3>Vehicle Registration</h3>
+    ✓ Proof of Ownership<br>
+    ✓ Nevada Insurance<br>
+    ✓ Smog Check (if required)<br>
+    ✓ VIN Inspection (out-of-state vehicles)<br><br>
+    <button onclick="closePopup('registrationPopup')">Close</button>
+  </div>
+</div>
+
+<div id="permitPopup" class="popup">
+  <div class="popup-content">
+    <h3>Moving Permits</h3>
+    ✓ VIN Number<br>
+    ✓ Vehicle Information<br>
+    ✓ Insurance Information<br><br>
+    <button onclick="closePopup('permitPopup')">Close</button>
+  </div>
+</div>
+
+<div id="bilingualPopup" class="popup">
+  <div class="popup-content">
+    <h3>Bilingual Service</h3>
+    ✓ English Assistance<br>
+    ✓ Spanish Assistance<br>
+    ✓ DMV Forms Help<br>
+    ✓ Document Guidance<br><br>
+    <button onclick="closePopup('bilingualPopup')">Close</button>
+  </div>
+</div>
 <div class="map-section">
 
 <h3>LAS VEGAS SERVICE AREA</h3>
@@ -650,6 +697,13 @@ LEAVE A REVIEW
  </footer>
 
 <script>
+  function openPopup(id){
+document.getElementById(id).style.display='block';
+}
+
+function closePopup(id){
+document.getElementById(id).style.display='none';
+}
 function setLanguage(lang) {
 
   if (lang === 'es') {
