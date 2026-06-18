@@ -394,6 +394,14 @@ padding:0 15px;
   transform: scale(1.08);
   box-shadow: 0 0 15px gold;
 } 
+  .business-card{
+  grid-column:1;
+}
+
+.dac-card{
+  grid-column:4;
+} 
+  
 .popup{
 display:none;
 position:fixed;
@@ -530,11 +538,11 @@ WHATSAPP
     <p id="card4-text">Tap for details</p>
 </div>
 
-<div class="card" onclick="openPopup('businessPopup')">
+<div class="card business-card" onclick="openPopup('businessPopup')">
     <h4 id="card5-title">Start Your Business</h4>
     <p id="card5-text">Tap for details</p>
 </div>
-  <div class="card" onclick="openPopup('dacPopup')">
+  <div class="card dac-card" onclick="openPopup('dacPopup')">
   <h4 id="card6-title">Driver Authorization Card</h4>
   <p id="card6-text">Tap for requirements</p>
 </div>
