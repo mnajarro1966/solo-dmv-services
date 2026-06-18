@@ -715,7 +715,6 @@ document.getElementById('news1-title').innerHTML =
 document.getElementById('news1-text').innerHTML =
 'Evite multas, remolques y problemas con su registración.';
 
-
 document.getElementById('card5-text').innerHTML =
 'Toca para detalles';
 
@@ -849,6 +848,17 @@ document.getElementById('card5-text').innerHTML =
 
   }
  if (lang === 'en') {
+   document.getElementById('news-title').innerHTML =
+'🚨 DMV Alert';
+
+document.getElementById('news1-title').innerHTML =
+'🚔 Police Looking For Expired Plates';
+
+document.getElementById('news1-text').innerHTML =
+'Avoid tickets, towing, and registration problems. Stay compliant and keep your vehicle legal.';
+
+document.getElementById('newsPopup').innerHTML =
+'<div class="popup-content"><h3>🚨 DMV Alert</h3><p>Avoid late fees, citations, and towing issues by renewing your registration before it expires.<br><br>Nevada drivers can renew online, by kiosk, or through authorized services.</p><button onclick="closePopup(\'newsPopup\')">Close</button></div>';
 document.getElementById('titlePopup').innerHTML =
 '<div class="popup-content"><h3>Title Transfers</h3>✓ Signed Title<br>✓ Valid ID<br>✓ Nevada Insurance<br>✓ Smog Check (if required)<br><br><button onclick="closePopup(\'titlePopup\')">Close</button></div>';
 
