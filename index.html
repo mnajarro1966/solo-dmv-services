@@ -640,17 +640,28 @@ loading="lazy">
 <div class="grid">
 
 <div class="card">
-<h4 id="news1-title">🚔 Police Looking For Expired Plates</h4>
-
+<h4 id="news1-title">🚨 Don't Wait Until Your Registration Expires</h4>
 <p id="news1-text">
-Avoid tickets, towing, and registration problems. Stay compliant and keep your vehicle legal.
+Avoid late fees, citations, and towing issues by renewing your registration before it expires. Need help? Solo DMV Services can assist with your renewal.
 </p>
 
-<a href="#" class="btn outline">Read More</a>
+<a href="#" class="btn outline" onclick="openPopup('newsPopup'); return false;">Read More</a>
 </div>
 
 </div>
 </section>
+ <div id="newsPopup" class="popup">
+  <div class="popup-content">
+    <h3>🚨 DMV Alert</h3>
+
+    <p>
+    Avoid late fees, citations, and towing by renewing your registration before it expires.
+    Nevada drivers can renew online, by kiosk, or through authorized services.
+    </p>
+
+    <button onclick="closePopup('newsPopup')">Close</button>
+  </div>
+</div> 
   <section class="reviews">
 
 <h3>CUSTOMER REVIEWS</h3>
