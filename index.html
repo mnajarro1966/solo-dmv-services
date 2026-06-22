@@ -1,1 +1,1044 @@
-PLACEHOLDER
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solo DMV Services Las Vegas | Title Transfers & DMV Help</title>
+<meta name="description" content="Mobile DMV services in Las Vegas offering title transfers, vehicle registration, moving permits, and bilingual DMV assistance.">
+  <meta name="keywords" content="DMV Las Vegas, title transfer Las Vegas, moving permit Las Vegas, vehicle registration Las Vegas, bilingual DMV service">
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#000;
+      color:white;
+    }
+
+    .hero{
+  min-height:100vh;
+
+  background:
+    radial-gradient(circle at center,
+    rgba(255,215,0,0.18) 0%,
+    rgba(0,0,0,0) 45%),
+    #000;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  padding:40px 20px;
+
+  position:relative;
+  overflow:hidden;
+    }
+.licensed-badge {
+position: absolute;
+
+top: 25px;
+left: 25px;
+
+display: flex;
+align-items: center;
+gap: 10px;
+
+color: #D4AF37;
+font-size: 20px;
+font-weight: bold;
+
+z-index: 1000;
+}
+
+.badge-icon {
+  width: 48px;
+  height: 48px;
+
+  border: 2px solid #D4AF37;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  background: rgba(212,175,55,0.08);
+
+  box-shadow: 0 0 10px rgba(212,175,55,0.5);
+}
+
+@media (max-width: 768px) {
+h1{
+font-size:2.8rem;
+}
+
+  #subtitle{
+    font-size:1.8rem;
+    line-height:1.3;
+    }
+    .licensed-badge{
+    display:none !important;
+    }
+.logo{
+ 
+    width:140px !important;
+    max-width:140px !important;
+}
+
+ }
+
+
+
+    
+    .logo{
+      width:180px;
+      max-width:70%;
+      height:auto;
+      margin-bottom:20px;
+      border-radius:50%;
+      border:3px solid #D4AF37;
+      box-shadow:0 0 40px rgba(255,215,0,.3);
+}
+    
+
+  h1{
+font-size:3.2rem;
+color:gold;
+margin:0;
+}
+
+    h2{
+      line-height:1.2;
+padding:0 15px;
+     font-size:1.5rem;
+      margin-top:15px;
+      color:white;
+    }
+
+    p{
+      max-width:1100px;
+      line-height:1.7;
+      color:#ccc;
+      font-size:1.1rem;
+    }
+
+    .buttons{
+      margin-top:35px;
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .btn{
+      padding:15px 30px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:.3s;
+    }
+
+    .btn.gold{
+  background:transparent;
+  color:gold;
+  border:2px solid gold;
+}
+   
+
+    .btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px gold;
+    }
+  .btn.outline:hover{
+  background: transparent;
+  color: gold;
+}    
+
+    .outline{
+      border:2px solid gold;
+      color:gold;
+    }
+
+    .outline:hover{
+      background:gold;
+      color:black;
+    }
+.gold-neon {
+
+   white-space: normal;
+
+    margin-top: 20px;
+    margin-bottom: 35px;
+
+    color: #ffcc00;
+
+    font-size: 2.2rem;
+    font-weight: 300;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 5px #ffcc00,
+        0 0 10px #ffcc00,
+        0 0 20px rgba(255, 204, 0, 0.8),
+        0 0 40px rgba(255, 204, 0, 0.5);
+
+    animation: flicker 7s infinite;
+}
+.and-text{
+    color:white;
+    font-size:2rem;
+    font-weight:300;
+    text-align:center;
+    line-height:1;
+    margin-top:-5px;
+    margin-bottom:-5px;
+}
+
+.gold-neon span{
+    display:inline-block;
+    animation:flicker 7s infinite;
+}
+
+.space{
+    width:20px;
+}
+
+.gold-neon span:nth-child(4){
+    animation-delay:1s;
+}
+
+.gold-neon span:nth-child(8){
+    animation-delay:2s;
+}
+
+.gold-neon span:nth-child(11){
+    animation-delay:3s;
+}
+    
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.45;
+    }
+}
+
+@media (max-width:768px){
+
+.gold-neon{
+   font-size:1.2rem;
+    letter-spacing:2px;
+    text-align:center;
+}
+ .language-buttons{
+    position:absolute;
+    top:20px;
+    left:20px;
+    right:20px;
+
+    display:flex;
+    justify-content:space-between;
+
+    width:auto;
+    max-width:none;
+    padding:0;
+}
+
+.language-buttons button{
+    width:110px;
+} 
+}
+
+    .services{
+      padding:80px 20px;
+      text-align:center;
+      background:#0a0a0a;
+    }
+
+    .services h3{
+      color:gold;
+      font-size:2.5rem;
+      margin-bottom:40px;
+      .contact-title{
+  text-shadow:
+    0 0 8px rgba(255,215,0,.6),
+    0 0 15px rgba(255,215,0,.3);
+}
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .card{
+      background:#111;
+      padding:30px;
+      border-radius:20px;
+      border:1px solid rgba(255,215,0,.2);
+    }
+
+    .card h4{
+      color:gold;
+      margin-bottom:15px;
+    }
+
+    footer{
+      padding:30px;
+      text-align:center;
+      color:#777;
+      font-size:.9rem;
+      border-top:1px solid #222;
+      
+    } 
+   .language-buttons {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1000;
+} 
+  .language-buttons button {
+  background: rgba(0,0,0,0.7);
+  color: gold;
+  border: 2px solid gold;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+    
+
+
+
+ .socials{
+  margin-top:30px;
+  display:flex;
+  gap:20px;
+  justify-content:center;
+}
+
+.socials a{
+  color:gold;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.socials a:hover{
+  color:white;
+} 
+ .map-section{
+  margin-top:80px;
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.map-section h3{
+  color:gold;
+  margin-bottom:25px;
+} 
+   .reviews{
+  margin-top:80px;
+  text-align:center;
+}
+
+.reviews h3{
+  color:gold;
+  margin-bottom:40px;
+}
+
+.review-card{
+    border:1px solid gold;
+    border-radius:20px;
+    padding:20px;
+    margin:20px auto;
+    max-width:500px;
+    background:#111;
+}
+
+.review-card p{
+  margin:15px 0;
+}
+
+.review-card span{
+  color:gold;
+  font-weight:bold;
+}
+
+.review-btn{
+  display:inline-block;
+  margin-top:30px;
+  background:gold;
+  color:black;
+  padding:15px 30px;
+  border-radius:15px;
+  text-decoration:none;
+  font-weight:bold;
+} 
+   .card,
+.review-card,
+.btn,
+.socials a,
+.language-buttons button{
+  transition: all 0.3s ease;
+}
+
+.card:hover,
+.review-card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px gold;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+}
+
+.socials a:hover{
+  transform: scale(1.15);
+} 
+ .language-buttons button:hover{
+  transform: scale(1.08);
+  box-shadow: 0 0 15px gold;
+} 
+  @media (min-width:769px){
+
+.business-card{
+    grid-column:1;
+}
+
+.dac-card{
+    grid-column:4;
+}
+
+}
+  
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.85);
+z-index:9999;
+}
+
+.popup-content{
+background:#111;
+border:2px solid gold;
+border-radius:20px;
+padding:30px;
+max-width:500px;
+margin:120px auto;
+text-align:center;
+color:white;
+box-shadow:0 0 30px gold;
+}
+
+.popup-content h3{
+color:gold;
+}
+
+.popup-content button{
+background:gold;
+color:black;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+}
+  #description{
+    font-size:2.4rem;
+    color:white;
+    margin-top:100px;
+
+} 
+    .licensed-text{
+    color:white;
+    font-size:1.8rem;
+    font-weight:600;
+    text-align:center;
+    margin-top:-20px;
+    margin-bottom:45px;
+}
+  .hero-slogan{
+    color:white;
+    font-size:2.2rem;
+    font-weight:300;
+    text-align:center;
+    margin-top:70px;
+    margin-bottom:70px;
+}  
+  </style>
+ 
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="language-buttons">
+  <button onclick="setLanguage('en')">ENGLISH</button>
+  <button onclick="setLanguage('es')">ESPAÑOL</button>
+</div>
+  
+<img class="logo"
+src="solo-dmv-logo.png"
+width="220"
+alt="Solo DMV Services Las Vegas Logo">
+  <h1 id="title">SOLO DMV SERVICES</h1>
+  <h2 id="subtitle">Las Vegas Mobile DMV Services</h2>
+ <div class="and-text" id="andText">and</div>
+<div class="gold-neon" id="neonText">
+WE COME TO YOU
+ </div> 
+ <div class="licensed-text">
+LICENSED & BONDED
+</div> 
+
+
+ 
+ 
+  
+
+  <div class="buttons">
+<a id="call-btn" class="btn gold"
+href="tel:7252331518">CALL NOW</a>
+    
+<a id="text-btn" class="btn gold"
+href="sms:+17252331518?body=Hola%20Solo%20DMV,%20necesito%20ayuda%20con%20un%20trámite%20DMV.">
+TEXT NOW
+</a>
+   
+<a id="whatsapp-btn" class="btn gold"
+href="https://wa.me/17252331518">
+WHATSAPP
+</a>
+  
+  </div>
+<div class="socials">
+
+  <a href="https://facebook.com" target="_blank">
+    FACEBOOK
+  </a>
+
+ <a href="https://instagram.com/solo_dmv_services_" target="_blank">
+  INSTAGRAM
+</a>
+  
+
+  <a href="https://tiktok.com" target="_blank">
+    TIKTOK
+  </a>
+
+</div>
+   <p id="description">
+ We Handle The Hassle.
+</p>
+</section>
+
+<section class="services">
+
+  <h3 id="services-title">Las Vegas DMV SERVICES</h3>
+
+<div class="grid">
+
+<div class="card" onclick="openPopup('titlePopup')">
+    <h4 id="card1-title">Title Transfers</h4>
+    <p id="card1-text">Tap for requirements</p>
+</div>
+
+<div class="card" onclick="openPopup('registrationPopup')">
+    <h4 id="card2-title">Vehicle Registration</h4>
+    <p id="card2-text">Tap for requirements</p>
+</div>
+
+<div class="card" onclick="openPopup('permitPopup')">
+    <h4 id="card3-title">Moving Permits</h4>
+    <p id="card3-text">Tap for requirements</p>
+</div>
+
+<div class="card" onclick="openPopup('bilingualPopup')">
+    <h4 id="card4-title">DMV Appointment Assistance & Translation</h4>
+    <p id="card4-text">Tap for details</p>
+</div>
+
+<div class="card business-card" onclick="openPopup('businessPopup')">
+    <h4 id="card5-title">Start Your Business</h4>
+    <p id="card5-text">Tap for details</p>
+</div>
+  <div class="card dac-card" onclick="openPopup('dacPopup')">
+  <h4 id="card6-title">Driver Authorization Card</h4>
+  <p id="card6-text">Tap for requirements</p>
+</div>
+
+</div>
+</section>
+  <section class="services">
+
+<div class="review-card">
+
+<h3 class="contact-title">Ready To Get Started?</h3>
+
+<p style="text-align:center; margin-bottom:25px; font-size:0.95rem;">
+Call, Text, Email, or WhatsApp Us.<br>
+We Come To You.
+</p>
+<p>
+<strong>Email</strong><br>
+<a href="mailto:mynor@solodmvservices.com" style="color:gold;text-decoration:none;">
+mynor@solodmvservices.com
+</a>
+</p>
+
+
+<p>
+<strong>Phone</strong><br>
+<a href="tel:7252331518" style="color:gold;text-decoration:none;">
+725-233-1518
+</a>
+</p>
+</div>
+
+</section>
+  <div id="titlePopup" class="popup">
+  <div class="popup-content">
+    <h3>Title Transfers</h3>
+    ✓ Signed Title<br>
+    ✓ Valid ID<br>
+    ✓ Nevada Insurance<br>
+    ✓ Smog Check (if required)<br><br>
+    <button onclick="closePopup('titlePopup')">Close</button>
+  </div>
+</div>
+
+<div id="registrationPopup" class="popup">
+  <div class="popup-content">
+    <h3>Vehicle Registration</h3>
+    ✓ Proof of Ownership<br>
+    ✓ Nevada Insurance<br>
+    ✓ Smog Check (if required)<br>
+    ✓ VIN Inspection (out-of-state vehicles)<br><br>
+    <button onclick="closePopup('registrationPopup')">Close</button>
+  </div>
+</div>
+
+<div id="permitPopup" class="popup">
+  <div class="popup-content">
+    <h3>Moving Permits</h3>
+    ✓ VIN Number<br>
+    ✓ Vehicle Information<br>
+    ✓ Insurance Information<br><br>
+    <button onclick="closePopup('permitPopup')">Close</button>
+  </div>
+</div>
+
+<div id="bilingualPopup" class="popup">
+  <div class="popup-content">
+    <h3>Bilingual Service</h3>
+    ✓ English Assistance<br>
+    ✓ Spanish Assistance<br>
+    ✓ DMV Forms Help<br>
+    ✓ Document Guidance<br><br>
+    <button onclick="closePopup('bilingualPopup')">Close</button>
+  </div>
+</div>
+  <div id="businessPopup" class="popup">
+    <div class="popup-content">
+    <h3>Comience Su Negocio</h3>
+
+✓ Formación de LLC<br>
+✓ Registro EIN<br>
+✓ Registro DBA<br>
+✓ Licencia Comercial<br>
+✓ Renovaciones Anuales<br><br>
+
+<button onclick="closePopup('businessPopup')">Cerrar</button>
+    </div>
+</div>
+  <div id="dacPopup" class="popup">
+  <div class="popup-content">
+    <h3>Driver Authorization Card</h3>
+
+    ✓ Proof of Identity<br>
+    ✓ Nevada Residency Documents<br>
+    ✓ DMV Application<br>
+    ✓ Appointment Assistance Available<br><br>
+
+    <button onclick="closePopup('dacPopup')">Close</button>
+  </div>
+</div>
+<div class="map-section">
+
+<h3>
+PROUDLY SERVING LAS VEGAS<br>
+AND SURROUNDING AREAS
+</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206253.53243326806!2d-115.33980653297783!3d36.12488712857212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1778744644324!5m2!1sen!2sus"
+width="100%"
+height="450"
+style="border:0; border-radius:20px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+  <section class="services" id="dmv-news">
+
+<h3 id="news-title">🚨 DMV Alert</h3>
+
+<div class="grid">
+
+<div class="card">
+<h4 id="news1-title">🚨 Don't Wait Until Your Registration Expires</h4>
+<p id="news1-text">
+Avoid late fees, citations, and towing issues by renewing your registration before it expires. Need help? Solo DMV Services can assist with your renewal.
+</p>
+
+<a href="#" class="btn outline" onclick="openPopup('newsPopup'); return false;">Read More</a>
+</div>
+
+</div>
+</section>
+ <div id="newsPopup" class="popup">
+  <div class="popup-content">
+    <h3>🚨 DMV Alert</h3>
+
+    <p>
+    Avoid late fees, citations, and towing by renewing your registration before it expires.
+    Nevada drivers can renew online, by kiosk, or through authorized services.
+    </p>
+
+    <button onclick="closePopup('newsPopup')">Close</button>
+  </div>
+</div> 
+  <section class="reviews">
+
+<h3>CUSTOMER REVIEWS</h3>
+
+<div class="review-card">
+⭐️⭐️⭐️⭐️⭐️
+<p>"Fast DMV help without waiting in long lines."</p>
+<span>- Carlos R.</span>
+</div>
+
+<div class="review-card">
+⭐️⭐️⭐️⭐️⭐️
+<p>"Very professional and bilingual service."</p>
+<span>- Maria G.</span>
+</div>
+
+<a class="review-btn"
+href="https://g.page/r/CYto3OetB1O0EAI/review"
+target="_blank">
+LEAVE A REVIEW
+</a>
+
+</section>
+<footer id="footer-text">
+
+  Solo DMV Services is an independent service provider and is not affiliated with the Nevada DMV or any government agency.
+  <br><br>
+  We are not attorneys and cannot provide legal advice.
+</footer> 
+
+
+
+
+
+<script>
+  function openPopup(id){
+document.getElementById(id).style.display='block';
+}
+
+function closePopup(id){
+document.getElementById(id).style.display='none';
+}
+function setLanguage(lang) {
+
+  if (lang === 'es') {
+    document.getElementById('andText').innerHTML =
+'Y';
+document.getElementById('news-title').innerHTML =
+'🚨 Alerta DMV';
+document.getElementById('news1-title').innerHTML =
+'🚔 La Policía Anda En Busca De Placas Vencidas';
+
+document.getElementById('news1-text').innerHTML =
+'Evite multas, remolques y problemas con su registración.';
+
+document.getElementById('card5-text').innerHTML =
+'Toca para detalles';
+
+document.getElementById('services-title').innerHTML =
+'SERVICIOS DMV EN LAS VEGAS';
+
+document.getElementById('card1-title').innerHTML =
+'Transferencia de Título';
+
+document.getElementById('card2-title').innerHTML =
+'Registro de Vehículo';
+
+document.getElementById('card3-title').innerHTML =
+'Permisos de Movimiento';
+
+document.getElementById('card4-title').innerHTML =
+'Acompañamiento y Servicio Bilingüe';
+
+document.getElementById('card5-title').innerHTML =
+'Comience Su Negocio';
+
+document.getElementById('card1-text').innerHTML =
+'Toca para requisitos';
+
+document.getElementById('card2-text').innerHTML =
+'Toca para requisitos';
+
+document.getElementById('card3-text').innerHTML =
+'Toca para requisitos';
+
+document.getElementById('card4-text').innerHTML =
+'Toca para detalles';
+
+document.getElementById('card5-text').innerHTML =
+'Toca para detalles';
+document.getElementById('card6-title').innerHTML =
+'Tarjeta de Autorización para Conducir';
+
+document.getElementById('card6-text').innerHTML =
+'Toca para requisitos';
+  document.getElementById('titlePopup').innerHTML =
+'<div class="popup-content"><h3>Traspaso de Título</h3>✓ Título Firmado<br>✓ Identificación Válida<br>✓ Seguro de Nevada<br>✓ Smog (si se requiere)<br><br><button onclick="closePopup(\'titlePopup\')">Cerrar</button></div>';
+
+document.getElementById('registrationPopup').innerHTML =
+'<div class="popup-content"><h3>Registro de Vehículo</h3>✓ Prueba de Propiedad<br>✓ Seguro de Nevada<br>✓ Smog (si se requiere)<br>✓ Inspección VIN (vehículos de otro estado)<br><br><button onclick="closePopup(\'registrationPopup\')">Cerrar</button></div>';
+
+document.getElementById('permitPopup').innerHTML =
+'<div class="popup-content"><h3>Permisos Temporales</h3>✓ Número VIN<br>✓ Información del Vehículo<br>✓ Información del Seguro<br><br><button onclick="closePopup(\'permitPopup\')">Cerrar</button></div>';
+
+document.getElementById('bilingualPopup').innerHTML =
+'<div class="popup-content"><h3>Servicio Bilingüe</h3>✓ Asistencia en Inglés<br>✓ Asistencia en Español<br>✓ Ayuda con Formularios DMV<br>✓ Guía de Documentos<br><br><button onclick="closePopup(\'bilingualPopup\')">Cerrar</button></div>';
+    document.getElementById('dacPopup').innerHTML =
+
+'<div class="popup-content"><h3>Tarjeta de Autorización para Conducir</h3>✓ Acta de Nacimiento o Pasaporte<br>✓ Comprobante de Domicilio<br>✓ Dos Documentos de Identidad<br>✓ Programar Cita DMV<br>✓ Examen de Conocimientos<br>✓ Examen de Manejo<br><br><button onclick="closePopup(\'dacPopup\')">Cerrar</button></div>';
+    document.getElementById('neonText').innerHTML =
+      
+'VAMOS HASTA USTED';
+document.getElementById('call-btn').innerHTML =
+  'LLÁMANOS';
+
+document.getElementById('whatsapp-btn').innerHTML =
+  'WHATSAPP';
+    document.getElementById('title').innerHTML =
+      'SOLO DMV SERVICES';
+
+    document.getElementById('subtitle').innerHTML =
+'Sin Filas En El DMV.<br>Nosotros Vamos Por Usted.';
+    document.getElementById('description').innerHTML =
+      document.getElementById('description').innerHTML =
+'Déjelo En Nuestras Manos.';
+document.getElementById('services-title').innerHTML =
+  'SERVICIOS';
+
+document.getElementById('card1-title').innerHTML =
+  'Transferencia De Título';
+
+document.getElementById('card1-text').innerHTML =
+  'Ayuda rápida con cambios de propietario.';
+
+document.getElementById('card2-title').innerHTML =
+  'Registración Vehicular';
+
+document.getElementById('card2-text').innerHTML =
+  'Evita las filas del DMV y recibe ayuda rápida.';
+
+document.getElementById('card3-title').innerHTML =
+  'Permisos Temporales';
+
+document.getElementById('card3-text').innerHTML =
+  'Permisos rápidos y ayuda con documentos del DMV.';
+
+document.getElementById('card4-title').innerHTML =
+  'Servicio Bilingüe';
+
+document.getElementById('card4-text').innerHTML =
+  'Atención disponible en inglés y español.';
+   document.getElementById('services-title').innerHTML =
+'SERVICIOS DMV EN LAS VEGAS';
+
+document.getElementById('card1-title').innerHTML =
+'Transferencia de Título';
+
+document.getElementById('card2-title').innerHTML =
+'Registro de Vehículo';
+
+document.getElementById('card3-title').innerHTML =
+'Permisos de Movimiento';
+
+document.getElementById('card4-title').innerHTML =
+'Acompañamiento y Servicio Bilingüe';
+
+document.getElementById('card5-title').innerHTML =
+'Comience Su Negocio';
+document.getElementById('card6-title').innerHTML =
+'Tarjeta de Autorización para Conducir';
+document.getElementById('card1-text').innerHTML =
+'Toca para requisitos';
+
+document.getElementById('card2-text').innerHTML =
+'Toca para requisitos';
+
+document.getElementById('card3-text').innerHTML =
+'Toca para requisitos';
+
+document.getElementById('card4-text').innerHTML =
+'Toca para detalles';
+
+document.getElementById('card5-text').innerHTML =
+'Toca para detalles';
+   document.getElementById('card6-text').innerHTML =
+'Toca para requisitos'; 
+
+  }
+ if (lang === 'en') {
+   document.getElementById('news-title').innerHTML =
+'🚨 DMV Alert';
+
+document.getElementById('news1-title').innerHTML =
+'🚔 Police Looking For Expired Plates';
+
+document.getElementById('news1-text').innerHTML =
+'Avoid tickets, towing, and registration problems. Stay compliant and keep your vehicle legal.';
+
+document.getElementById('newsPopup').innerHTML =
+'<div class="popup-content"><h3>🚨 DMV Alert</h3><p>Avoid late fees, citations, and towing issues by renewing your registration before it expires.<br><br>Nevada drivers can renew online, by kiosk, or through authorized services.</p><button onclick="closePopup(\'newsPopup\')">Close</button></div>';
+document.getElementById('titlePopup').innerHTML =
+'<div class="popup-content"><h3>Title Transfers</h3>✓ Signed Title<br>✓ Valid ID<br>✓ Nevada Insurance<br>✓ Smog Check (if required)<br><br><button onclick="closePopup(\'titlePopup\')">Close</button></div>';
+
+document.getElementById('registrationPopup').innerHTML =
+'<div class="popup-content"><h3>Vehicle Registration</h3>✓ Proof of Ownership<br>✓ Nevada Insurance<br>✓ Smog Check (if required)<br>✓ VIN Inspection (out-of-state vehicles)<br><br><button onclick="closePopup(\'registrationPopup\')">Close</button></div>';
+
+document.getElementById('permitPopup').innerHTML =
+'<div class="popup-content"><h3>Moving Permits</h3>✓ VIN Number<br>✓ Vehicle Information<br>✓ Insurance Information<br><br><button onclick="closePopup(\'permitPopup\')">Close</button></div>';
+
+document.getElementById('bilingualPopup').innerHTML =
+'<div class="popup-content"><h3>Bilingual Service</h3>✓ English Assistance<br>✓ Spanish Assistance<br>✓ DMV Forms Help<br>✓ Document Guidance<br><br><button onclick="closePopup(\'bilingualPopup\')">Close</button></div>';
+  document.getElementById('dacPopup').innerHTML =
+'<div class="popup-content"><h3>Driver Authorization Card</h3>✓ Birth Certificate or Passport<br>✓ Proof of Address<br>✓ Two Identity Documents<br>✓ DMV Appointment<br>✓ Written Test<br>✓ Driving Test<br><br><button onclick="closePopup(\'dacPopup\')">Close</button></div>';
+document.getElementById('andText').innerHTML =
+'And';
+  document.getElementById('services-title').innerHTML =
+'Las Vegas DMV SERVICES';
+
+document.getElementById('card1-title').innerHTML =
+'Title Transfers';
+
+document.getElementById('card2-title').innerHTML =
+'Vehicle Registration';
+
+document.getElementById('card3-title').innerHTML =
+'Moving Permits';
+
+document.getElementById('card4-title').innerHTML =
+'DMV Appointment Assistance & Translation';
+
+document.getElementById('card5-title').innerHTML =
+'Start Your Business';
+document.getElementById('card6-title').innerHTML =
+'Driver Authorization Card';
+document.getElementById('card1-text').innerHTML =
+'Tap for requirements';
+
+document.getElementById('card2-text').innerHTML =
+'Tap for requirements';
+
+document.getElementById('card3-text').innerHTML =
+'Tap for requirements';
+
+document.getElementById('card4-text').innerHTML =
+'Tap for details';
+
+document.getElementById('card5-text').innerHTML =
+'Tap for details';
+   document.getElementById('card6-text').innerHTML =
+'Tap for requirements';
+document.getElementById('businessPopup').innerHTML =
+'<div class="popup-content"><h3>Start Your Business</h3>✔ LLC Formation<br>✔ EIN Registration<br>✔ DBA Registration<br>✔ Business License<br>✔ Annual Renewals<br><br><button onclick="closePopup(\'businessPopup\')">Close</button></div>';
+document.getElementById('neonText').innerHTML =
+'WE COME TO YOU';
+    document.getElementById('call-btn').innerHTML =
+  'CALL NOW';
+
+document.getElementById('whatsapp-btn').innerHTML =
+  'WHATSAPP';
+    document.getElementById('title').innerHTML =
+  'SOLO DMV SERVICES';
+
+document.getElementById('subtitle').innerHTML =
+'No DMV Lines.<br>We Go For You.';
+
+document.getElementById('description').innerHTML =
+'We Handle The Hassle.';
+document.getElementById('services-title').innerHTML =
+  'SERVICES';
+
+document.getElementById('card1-title').innerHTML =
+  'Title Transfers';
+
+document.getElementById('card1-text').innerHTML =
+  'Fast assistance with vehicle ownership transfers.';
+
+document.getElementById('card2-title').innerHTML =
+  'Vehicle Registration';
+
+document.getElementById('card2-text').innerHTML =
+  'Skip the DMV wait and get help fast.';
+
+document.getElementById('card3-title').innerHTML =
+  'Moving Permits';
+
+document.getElementById('card3-text').innerHTML =
+  'Quick temporary permits and DMV paperwork assistance.';
+
+document.getElementById('card4-title').innerHTML =
+  'Bilingual Service';
+
+document.getElementById('card4-text').innerHTML =
+  'English & Spanish assistance available.';
+
+document.getElementById('footer-text').innerHTML =
+  'Solo DMV Services is an independent service provider and is not affiliated with the Nevada DMV or any government agency.<br><br>We are not attorneys and cannot provide legal advice.';
+   
+  }  
+
+}    
+</script>
+
+</body>
+</html> 
