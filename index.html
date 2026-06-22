@@ -691,9 +691,10 @@ mynor@solodmvservices.com
     ✓ Appointment Assistance Available<br><br>
 <a href="https://knowtodrive.com/nevada/"
    target="_blank"
-   class="btn gold">
-   ONLINE DAC EXAM
-</a>
+   class="btn gold"
+   id="dacExamBtn">
+<span id="dacExamBtn">ONLINE DAC EXAM</span>
+</a>dame li
 
 <br><br>
     <button onclick="closePopup('dacPopup')">Close</button>
@@ -789,6 +790,8 @@ document.getElementById(id).style.display='none';
 function setLanguage(lang) {
 
   if (lang === 'es') {
+    document.getElementById('dacExamBtn').innerHTML =
+'EXAMEN DAC EN LINEA';
     document.getElementById('andText').innerHTML =
 'Y';
 document.getElementById('news-title').innerHTML =
@@ -933,6 +936,8 @@ document.getElementById('card5-text').innerHTML =
 
   }
  if (lang === 'en') {
+   document.getElementById('dacExamBtn').innerHTML =
+'ONLINE DAC EXAM';
    document.getElementById('news-title').innerHTML =
 '🚨 DMV Alert';
 
