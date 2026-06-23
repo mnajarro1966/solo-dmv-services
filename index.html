@@ -741,22 +741,22 @@ Avoid late fees, citations, and towing issues by renewing your registration befo
 </div> 
   <section class="reviews">
 
-<h3>CUSTOMER REVIEWS</h3>
+<h3 id="reviews-title">CUSTOMER REVIEWS</h3>
 
 <div class="review-card">
 ⭐️⭐️⭐️⭐️⭐️
-<p>"Fast DMV help without waiting in long lines."</p>
+<p id="review1-text">"Fast DMV help without waiting in long lines."</p>
 <span>- Carlos R.</span>
 </div>
 
 <div class="review-card">
 ⭐️⭐️⭐️⭐️⭐️
-<p>"Very professional and bilingual service."</p>
+<p id="review2-text">"Very professional and bilingual service."</p>
 <span>- Maria G.</span>
 </div>
 
-<a class="review-btn"
-href="https://g.page/r/CYto3OetB1O0EAI/review"
+<a id="review-btn" class="review-btn"
+href="https://g.page/r/CYto3OetB100EAI/review"
 target="_blank">
 LEAVE A REVIEW
 </a>
@@ -784,6 +784,17 @@ document.getElementById(id).style.display='none';
 function setLanguage(lang) {
 
   if (lang === 'es') {
+    document.getElementById('reviews-title').innerHTML =
+'RESEÑAS DE CLIENTES';
+
+document.getElementById('review1-text').innerHTML =
+'"Ayuda rápida con trámites DMV sin largas filas."';
+
+document.getElementById('review2-text').innerHTML =
+'"Servicio muy profesional y bilingüe."';
+
+document.getElementById('review-btn').innerHTML =
+'DEJAR RESEÑA';
   document.getElementById('area-title').innerHTML =
 'ORGULLOSAMENTE SIRVIENDO LAS VEGAS<br>Y ÁREAS CERCANAS';
     
@@ -936,6 +947,17 @@ document.getElementById('footer-text').innerHTML =
 'Solo DMV Services es un proveedor de servicios independiente y no está afiliado al DMV de Nevada ni a ninguna agencia gubernamental.<br><br>No somos abogados y no podemos brindar asesoría legal.';
   }
  if (lang === 'en') {
+   document.getElementById('reviews-title').innerHTML =
+'CUSTOMER REVIEWS';
+
+document.getElementById('review1-text').innerHTML =
+'"Fast DMV help without waiting in long lines."';
+
+document.getElementById('review2-text').innerHTML =
+'"Very professional and bilingual service."';
+
+document.getElementById('review-btn').innerHTML =
+'LEAVE A REVIEW';
   document.getElementById('area-title').innerHTML =
 'PROUDLY SERVING LAS VEGAS<br>AND SURROUNDING AREAS';
    
