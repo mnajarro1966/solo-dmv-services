@@ -696,7 +696,7 @@ mynor@solodmvservices.com
 </div>
 <div class="map-section">
 
-<h3>
+<h3 id="area-title">
 PROUDLY SERVING LAS VEGAS<br>
 AND SURROUNDING AREAS
 </h3>
@@ -784,6 +784,9 @@ document.getElementById(id).style.display='none';
 function setLanguage(lang) {
 
   if (lang === 'es') {
+  document.getElementById('area-title').innerHTML =
+'ORGULLOSAMENTE SIRVIENDO LAS VEGAS<br>Y ÁREAS CERCANAS';
+    
    document.querySelector('.licensed-text').innerHTML =
 'LICENCIADO Y AFIANZADO'; 
     document.getElementById('andText').innerHTML =
@@ -933,6 +936,9 @@ document.getElementById('footer-text').innerHTML =
 'Solo DMV Services es un proveedor de servicios independiente y no está afiliado al DMV de Nevada ni a ninguna agencia gubernamental.<br><br>No somos abogados y no podemos brindar asesoría legal.';
   }
  if (lang === 'en') {
+  document.getElementById('area-title').innerHTML =
+'PROUDLY SERVING LAS VEGAS<br>AND SURROUNDING AREAS';
+   
    document.querySelector('.licensed-text').innerHTML =
 'LICENSED & BONDED';
    document.getElementById('news-title').innerHTML =
