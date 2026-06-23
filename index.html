@@ -784,6 +784,8 @@ document.getElementById(id).style.display='none';
 function setLanguage(lang) {
 
   if (lang === 'es') {
+    document.getElementById('contact-text').innerHTML =
+'Llámenos, envíenos un mensaje de texto,<br>correo electrónico o WhatsApp.<br>Nosotros Vamos Hasta Usted.';
  document.getElementById('contact-title').innerHTML =
 '¿Listo Para Comenzar?';
     document.getElementById('news-btn').innerHTML =
@@ -955,6 +957,8 @@ document.getElementById('footer-text').innerHTML =
  if (lang === 'en') {
   document.getElementById('contact-title').innerHTML =
 'Ready To Get Started?'; 
+   document.getElementById('contact-text').innerHTML =
+'Call us, send us a text message,<br>Email or WhatsApp.<br>We Come To You.';
   document.getElementById('news-btn').innerHTML =
 'Read More'; 
    document.getElementById('news-btn').innerHTML =
