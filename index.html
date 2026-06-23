@@ -722,7 +722,7 @@ loading="lazy">
 Avoid late fees, citations, and towing issues by renewing your registration before it expires. Need help? Solo DMV Services can assist with your renewal.
 </p>
 
-<a href="#" class="btn outline" onclick="openPopup('newsPopup'); return false;">Read More</a>
+<a id="news-btn" href="#" class="btn outline" onclick="openPopup('newsPopup'); return false;">Read More</a>
 </div>
 
 </div>
@@ -784,6 +784,8 @@ document.getElementById(id).style.display='none';
 function setLanguage(lang) {
 
   if (lang === 'es') {
+    document.getElementById('news-btn').innerHTML =
+'Leer Más';
     document.getElementById('reviews-title').innerHTML =
 'RESEÑAS DE CLIENTES';
 
@@ -947,6 +949,9 @@ document.getElementById('footer-text').innerHTML =
 'Solo DMV Services es un proveedor de servicios independiente y no está afiliado al DMV de Nevada ni a ninguna agencia gubernamental.<br><br>No somos abogados y no podemos brindar asesoría legal.';
   }
  if (lang === 'en') {
+  document.getElementById('news-btn').innerHTML =
+'Read More'; 
+   document.getElementById('news-btn').innerHTML =
    document.getElementById('reviews-title').innerHTML =
 'CUSTOMER REVIEWS';
 
