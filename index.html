@@ -602,8 +602,7 @@ TIKTOK
 
 <div class="review-card">
 
-<h3 class="contact-title">¿Listo Para Comenzar?</h3>
-
+<h3 id="contact-title" class="contact-title">¿Listo Para Comenzar?</h3>
 <p style="text-align:center; margin-bottom:25px; font-size:0.95rem;">
 Llámenos, envíenos un mensaje de texto,<br>
 correo electrónico o WhatsApp.<br>
@@ -784,6 +783,8 @@ document.getElementById(id).style.display='none';
 function setLanguage(lang) {
 
   if (lang === 'es') {
+   document.getElementById('contact-title').innerHTML =
+'¿Listo Para Comenzar?'; 
     document.getElementById('news-btn').innerHTML =
 'Leer Más';
     document.getElementById('reviews-title').innerHTML =
@@ -951,6 +952,8 @@ document.getElementById('footer-text').innerHTML =
 'Solo DMV Services es un proveedor de servicios independiente y no está afiliado al DMV de Nevada ni a ninguna agencia gubernamental.<br><br>No somos abogados y no podemos brindar asesoría legal.';
   }
  if (lang === 'en') {
+  document.getElementById('contact-title').innerHTML =
+'Ready To Get Started?'; 
   document.getElementById('news-btn').innerHTML =
 'Read More'; 
    document.getElementById('news-btn').innerHTML =
