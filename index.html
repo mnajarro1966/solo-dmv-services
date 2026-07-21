@@ -492,6 +492,72 @@ margin-top:20px;
     text-align:center;
     margin-top:70px;
     margin-bottom:70px;
+} 
+  .credentials-section{
+  padding:0 20px 80px;
+  text-align:center;
+  background:#000;
+}
+
+.credentials-card{
+  max-width:760px;
+  margin:0 auto;
+  padding:32px 24px;
+  background:#111;
+  border:1px solid rgba(255,215,0,.45);
+  border-radius:20px;
+  box-shadow:0 0 22px rgba(255,215,0,.18);
+}
+
+.credentials-icon{
+  font-size:2.2rem;
+  margin-bottom:10px;
+}
+
+.credentials-card h3{
+  color:gold;
+  font-size:2rem;
+  margin:0 0 15px;
+}
+
+.credentials-card p{
+  max-width:650px;
+  margin:0 auto 25px;
+  color:#ccc;
+}
+
+.credentials-btn{
+  background:transparent;
+  color:gold;
+  border:2px solid gold;
+  padding:14px 28px;
+  border-radius:12px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:all .3s ease;
+}
+
+.credentials-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px gold;
+}
+
+@media (max-width:768px){
+  .credentials-section{
+    padding:0 15px 55px;
+  }
+
+  .credentials-card{
+    padding:26px 18px;
+  }
+
+  .credentials-card h3{
+    font-size:1.6rem;
+  }
+
+  .credentials-btn{
+    width:100%;
+  }
 }  
   </style>
  
@@ -560,7 +626,68 @@ TIKTOK
  We Handle The Hassle.
 </p>
 </section>
+ <section class="credentials-section">
 
+  <div class="credentials-card">
+
+    <div class="credentials-icon">🛡️</div>
+
+    <h3>Licensed, Bonded & Verified</h3>
+
+    <p>
+      Bee Safe Multiservices LLC operates Solo DMV Services as a licensed Nevada
+      Document Preparation Service.
+    </p>
+
+    <button class="credentials-btn" onclick="openPopup('credentialsPopup')">
+      Verify Our Credentials
+    </button>
+
+  </div>
+
+</section> 
+<div id="credentialsPopup" class="popup">
+  <div class="popup-content">
+
+    <h3>Business Credentials</h3>
+
+    <p>
+      <strong>Business:</strong><br>
+      Bee Safe Multiservices LLC
+    </p>
+
+    <p>
+      <strong>Doing Business As:</strong><br>
+      Solo DMV Services
+    </p>
+
+    <p>
+      <strong>Nevada Document Preparation Registration:</strong><br>
+      NVDP20245227286
+    </p>
+
+    <p>
+      <strong>Surety Bond Number:</strong><br>
+      67604607
+    </p>
+
+    <p>
+      <strong>Bond Amount:</strong><br>
+      $25,000
+    </p>
+
+    <p style="font-size:0.9rem;">
+      Solo DMV Services is an independent document preparation service.
+      We are not attorneys and cannot provide legal advice.
+      We are not affiliated with the Nevada DMV or any government agency.
+    </p>
+
+    <button onclick="closePopup('credentialsPopup')">
+      Close
+    </button>
+
+  </div>
+</div>
 <section class="services">
 
   <h3 id="services-title">Las Vegas DMV SERVICES</h3>
