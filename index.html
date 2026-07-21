@@ -908,8 +908,98 @@ document.getElementById(id).style.display='block';
 function closePopup(id){
 document.getElementById(id).style.display='none';
 }
-function setLanguage(lang) {
+ function setCredentialsLanguage(lang) {
+  const card = document.querySelector('.credentials-card');
+  const popup = document.getElementById('credentialsPopup');
 
+  if (!card || !popup) return;
+
+  if (lang === 'es') {
+    card.innerHTML = `
+      <div class="credentials-icon">🛡️</div>
+      <h3>Licenciado, Afianzado y Verificado</h3>
+      <p>
+        Bee Safe Multiservices LLC opera Solo DMV Services como un servicio
+        de preparación de documentos registrado en Nevada.
+      </p>
+      <button class="credentials-btn" onclick="openPopup('credentialsPopup')">
+        Ver Nuestras Credenciales
+      </button>
+    `;
+
+    popup.innerHTML = `
+      <div class="popup-content">
+        <h3>Credenciales del Negocio</h3>
+
+        <p><strong>Empresa:</strong><br>
+        Bee Safe Multiservices LLC</p>
+
+        <p><strong>Nombre Comercial:</strong><br>
+        Solo DMV Services</p>
+
+        <p><strong>Registro de Preparación de Documentos de Nevada:</strong><br>
+        NVDP20245227286</p>
+
+        <p><strong>Número de Fianza:</strong><br>
+        67604607</p>
+
+        <p><strong>Monto de la Fianza:</strong><br>
+        $25,000</p>
+
+        <p style="font-size:0.9rem;">
+          Solo DMV Services es un servicio independiente de preparación de documentos.
+          No somos abogados y no podemos brindar asesoría legal.
+          No estamos afiliados al DMV de Nevada ni a ninguna agencia gubernamental.
+        </p>
+
+        <button onclick="closePopup('credentialsPopup')">Cerrar</button>
+      </div>
+    `;
+  } else {
+    card.innerHTML = `
+      <div class="credentials-icon">🛡️</div>
+      <h3>Licensed, Bonded & Verified</h3>
+      <p>
+        Bee Safe Multiservices LLC operates Solo DMV Services as a licensed Nevada
+        Document Preparation Service.
+      </p>
+      <button class="credentials-btn" onclick="openPopup('credentialsPopup')">
+        Verify Our Credentials
+      </button>
+    `;
+
+    popup.innerHTML = `
+      <div class="popup-content">
+        <h3>Business Credentials</h3>
+
+        <p><strong>Business:</strong><br>
+        Bee Safe Multiservices LLC</p>
+
+        <p><strong>Doing Business As:</strong><br>
+        Solo DMV Services</p>
+
+        <p><strong>Nevada Document Preparation Registration:</strong><br>
+        NVDP20245227286</p>
+
+        <p><strong>Surety Bond Number:</strong><br>
+        67604607</p>
+
+        <p><strong>Bond Amount:</strong><br>
+        $25,000</p>
+
+        <p style="font-size:0.9rem;">
+          Solo DMV Services is an independent document preparation service.
+          We are not attorneys and cannot provide legal advice.
+          We are not affiliated with the Nevada DMV or any government agency.
+        </p>
+
+        <button onclick="closePopup('credentialsPopup')">Close</button>
+      </div>
+    `;
+  }
+} 
+function setLanguage(lang) {
+setCredentialsLanguage(lang);
   if (lang === 'es') {
    document.getElementById('reviews-title').innerHTML =
 'Lo Que Dicen Nuestros Clientes'; 
