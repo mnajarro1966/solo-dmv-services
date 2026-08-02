@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solo DMV Logo Flicker Preview</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    .logo {
+      width: 220px;
+      max-width: 70vw;
+      height: auto;
+      border: 0;
+      border-radius: 50%;
+      filter: brightness(.08) drop-shadow(0 0 0 rgba(255,215,0,0));
+      animation: logo-power-on 8s ease-in-out infinite;
+    }
+
+    @keyframes logo-power-on {
+      0%, 5% {
+        opacity: .18;
+        filter: brightness(.08) drop-shadow(0 0 0 rgba(255,215,0,0));
+      }
+      7% {
+        opacity: .72;
+        filter: brightness(.55) drop-shadow(0 0 12px rgba(255,215,0,.25));
+      }
+      8% {
+        opacity: .2;
+        filter: brightness(.1) drop-shadow(0 0 0 rgba(255,215,0,0));
+      }
+      10% {
+        opacity: .95;
+        filter: brightness(.9) drop-shadow(0 0 24px rgba(255,215,0,.55));
+      }
+      11% {
+        opacity: .35;
+        filter: brightness(.22) drop-shadow(0 0 5px rgba(255,215,0,.12));
+      }
+      14%, 72% {
+        opacity: 1;
+        filter: brightness(1) drop-shadow(0 0 28px rgba(255,215,0,.55));
+      }
+      73% {
+        opacity: .72;
+        filter: brightness(.62) drop-shadow(0 0 10px rgba(255,215,0,.25));
+      }
+      74%, 100% {
+        opacity: 1;
+        filter: brightness(1) drop-shadow(0 0 28px rgba(255,215,0,.55));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .logo {
+        animation: none;
+        opacity: 1;
+        filter: brightness(1) drop-shadow(0 0 28px rgba(255,215,0,.55));
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="logo" src="solo-dmv-logo.png" alt="Solo DMV Services logo flicker preview">
+</body>
+</html>
