@@ -1,6 +1,7 @@
 name: Add KnowToDrive Resource
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
@@ -20,43 +21,30 @@ jobs:
         run: |
           from pathlib import Path
 
-          path = Path('index.html')
-          text = path.read_text(encoding='utf-8')
-
+          path = Path("index.html")
+          text = path.read_text(encoding="utf-8")
           marker = '<footer id="footer-text">'
-          section = '''
-<section class="services" id="official-online-test">
-  <div class="credentials-card">
-    <div class="credentials-icon">📝</div>
-    <h3>Official Nevada Online Knowledge Test</h3>
-    <p>
-      Take the official Nevada driver knowledge exam online from home through
-      KnowTo Drive, the testing platform used by the Nevada DMV.
-    </p>
-    <a class="credentials-btn" href="https://knowtodrive.com/nevada/"
-       target="_blank" rel="noopener noreferrer"
-       style="display:inline-block;text-decoration:none;">
-      Start the Official Online Test
-    </a>
-    <p style="font-size:0.82rem;margin-top:22px;color:#888;">
-      External website. Solo DMV Services does not administer the exam and is not
-      affiliated with KnowTo Drive, the Nevada DMV, or any government agency.
-    </p>
-    <p style="font-size:0.95rem;margin-top:18px;">
-      <strong style="color:gold;">Examen oficial de conocimientos en línea:</strong><br>
-      El enlace abre el sitio externo de KnowTo Drive. Solo DMV Services no administra
-      el examen ni está afiliado con KnowTo Drive o el DMV de Nevada.
-    </p>
-  </div>
-</section>
 
-'''
+          lines = [
+              '<section class="services" id="official-online-test">',
+              '  <div class="credentials-card">',
+              '    <div class="credentials-icon">📝</div>',
+              '    <h3>Official Nevada Online Knowledge Test</h3>',
+              '    <p>Take the official Nevada driver knowledge exam online from home through KnowTo Drive, the testing platform used by the Nevada DMV.</p>',
+              '    <a class="credentials-btn" href="https://knowtodrive.com/nevada/" target="_blank" rel="noopener noreferrer" style="display:inline-block;text-decoration:none;">Start the Official Online Test</a>',
+              '    <p style="font-size:0.82rem;margin-top:22px;color:#888;">External website. Solo DMV Services does not administer the exam and is not affiliated with KnowTo Drive, the Nevada DMV, or any government agency.</p>',
+              '    <p style="font-size:0.95rem;margin-top:18px;"><strong style="color:gold;">Examen oficial de conocimientos en línea:</strong><br>El enlace abre el sitio externo de KnowTo Drive. Solo DMV Services no administra el examen ni está afiliado con KnowTo Drive o el DMV de Nevada.</p>',
+              '  </div>',
+              '</section>',
+              '',
+          ]
+          section = "\n".join(lines)
 
           if 'id="official-online-test"' not in text:
               if marker not in text:
-                  raise SystemExit('Footer marker not found; no changes made.')
+                  raise SystemExit("Footer marker not found; no changes made.")
               text = text.replace(marker, section + marker, 1)
-              path.write_text(text, encoding='utf-8')
+              path.write_text(text, encoding="utf-8")
 
       - name: Commit homepage update
         run: |
