@@ -347,6 +347,33 @@ padding:0 15px;
 .socials a:hover{
   color:white;
 } 
+ .business-hours{
+  width:100%;
+  max-width:760px;
+  margin-top:40px;
+  text-align:center;
+}
+
+.business-hours p{
+  margin:0;
+  line-height:1.4;
+  font-weight:bold;
+}
+
+.business-hours .hours-headline{
+  color:white;
+  font-size:clamp(1.25rem, 3vw, 2rem);
+}
+
+.business-hours .hours-schedule{
+  margin-top:10px;
+  color:gold;
+  font-size:clamp(1rem, 2.2vw, 1.4rem);
+}
+
+.business-hours + #description{
+  margin-top:45px;
+}
  .map-section{
   margin-top:80px;
   max-width:1000px;
@@ -621,6 +648,10 @@ INSTAGRAM
 TIKTOK
 </a>
 
+</div>
+<div class="business-hours">
+  <p class="hours-headline" id="hours-headline">OPEN LATE. EVERY DAY.</p>
+  <p class="hours-schedule" id="hours-schedule">10 AM – 10 PM • 7 DAYS A WEEK</p>
 </div>
    <p id="description">
  We Handle The Hassle.
@@ -1024,6 +1055,12 @@ document.getElementById(id).style.display='none';
 } 
 function setLanguage(lang) {
 setCredentialsLanguage(lang);
+  document.getElementById('hours-headline').textContent = lang === 'es'
+    ? 'ABIERTO HASTA TARDE. TODOS LOS DÍAS.'
+    : 'OPEN LATE. EVERY DAY.';
+  document.getElementById('hours-schedule').textContent = lang === 'es'
+    ? '10 AM – 10 PM • 7 DÍAS A LA SEMANA'
+    : '10 AM – 10 PM • 7 DAYS A WEEK';
   const notarySpanish = lang === 'es';
   document.getElementById('notary-title').textContent = notarySpanish ? 'Notario Público / Servicios Notariales' : 'Notary Public / Notary Services';
   document.getElementById('notary-text').textContent = notarySpanish ? 'Toca para detalles' : 'Tap for details';
