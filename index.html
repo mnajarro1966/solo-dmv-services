@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Solo DMV Services Las Vegas | Title Transfers & DMV Help</title>
-<meta name="description" content="Mobile DMV services in Las Vegas offering title transfers, vehicle registration, moving permits, and bilingual DMV assistance.">
+<meta name="description" content="Mobile DMV services and Notary Services in Las Vegas offering title transfers, vehicle registration, moving permits, and bilingual assistance.">
   <meta name="keywords" content="DMV Las Vegas, title transfer Las Vegas, moving permit Las Vegas, vehicle registration Las Vegas, bilingual DMV service">
   <style>
     body{
@@ -718,6 +718,10 @@ TIKTOK
     <h4 id="card5-title">Start Your Business</h4>
     <p id="card5-text">Tap for details</p>
 </div>
+<div class="card" role="button" tabindex="0" onclick="openPopup('notaryPopup')" onkeydown="if(event.key === 'Enter' || event.key === ' '){event.preventDefault();openPopup('notaryPopup');}">
+    <h4 id="notary-title">Notary Public / Notary Services</h4>
+    <p id="notary-text">Tap for details</p>
+</div>
   <div class="card dac-card" onclick="openPopup('dacPopup')">
   <h4 id="card6-title">Driver Authorization Card</h4>
   <p id="card6-text">Tap for requirements</p>
@@ -725,6 +729,13 @@ TIKTOK
 
 </div>
 </section>
+<div id="notaryPopup" class="popup" role="dialog" aria-modal="true" aria-labelledby="notary-popup-title">
+  <div class="popup-content">
+    <h3 id="notary-popup-title">Notary Services</h3>
+    <p id="notary-popup-text">Nevada Notary Public services in Las Vegas.<br>Contact us to discuss your document and schedule an appointment.<br>Assistance available in English and Spanish.</p>
+    <button id="notary-close" onclick="closePopup('notaryPopup')">Close</button>
+  </div>
+</div>
   <section class="services">
 
 <div class="review-card">
@@ -1013,6 +1024,14 @@ document.getElementById(id).style.display='none';
 } 
 function setLanguage(lang) {
 setCredentialsLanguage(lang);
+  const notarySpanish = lang === 'es';
+  document.getElementById('notary-title').textContent = notarySpanish ? 'Notario Público / Servicios Notariales' : 'Notary Public / Notary Services';
+  document.getElementById('notary-text').textContent = notarySpanish ? 'Toca para detalles' : 'Tap for details';
+  document.getElementById('notary-popup-title').textContent = notarySpanish ? 'Servicios Notariales' : 'Notary Services';
+  document.getElementById('notary-popup-text').innerHTML = notarySpanish
+    ? 'Servicios de notario público de Nevada en Las Vegas.<br>Contáctenos para hablar sobre su documento y programar una cita.<br>Atención disponible en inglés y español.'
+    : 'Nevada Notary Public services in Las Vegas.<br>Contact us to discuss your document and schedule an appointment.<br>Assistance available in English and Spanish.';
+  document.getElementById('notary-close').textContent = notarySpanish ? 'Cerrar' : 'Close';
   if (lang === 'es') {
    document.getElementById('reviews-title').innerHTML =
 'Lo Que Dicen Nuestros Clientes'; 
